@@ -1,16 +1,15 @@
-# This is a sample Python script.
+# Задача 26:  Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# *Пример:*
 
+# A = 3; B = 5 -> 243 (3⁵)
+#     A = 2; B = 3 -> 8 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def r(a, b):
+    if b == 0:
+        return 1
+    return a * r(a, b - 1)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+a = int(input('Введите число A: '))
+b = int(input('Введите число B: '))
+print(r(a, b))
